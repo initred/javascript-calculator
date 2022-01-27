@@ -93,18 +93,21 @@ function loadCalculator(elementId) {
     function calculate(operator, oldValue, newValue) {
         let value = ''
         
+        oldValue = Number(oldValue)
+        newValue = Number(newValue)
+        
         switch(operator) {
             case '+':
-                value = Number(oldValue) + Number(newValue)
+                value = oldValue + newValue
                 break
             case '-':
-                value = Number(oldValue) - Number(newValue)
+                value = oldValue - newValue
                 break
             case '*':
-                value = Number(oldValue) * Number(newValue)
+                value = oldValue * newValue
                 break
             case '/':
-                value = Number(oldValue) / Number(newValue)
+                value = oldValue / newValue
                 break
         }
     
